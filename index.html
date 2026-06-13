@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Portfolio | Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white font-sans antialiased">
+
+    <header class="absolute top-0 left-0 w-full z-50 bg-gradient-to-b from-black/70 to-transparent">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-wider text-teal-400">PORTFOLIO.</a>
+            <div class="space-x-6 hidden md:block">
+                <a href="#" class="hover:text-teal-400 transition-colors">Home</a>
+                <a href="#" class="hover:text-teal-400 transition-colors">Projects</a>
+                <a href="#" class="hover:text-teal-400 transition-colors">Services</a>
+                <a href="#" class="hover:text-teal-400 transition-colors">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="relative h-screen w-full overflow-hidden bg-black" aria-label="Featured Projects Slider">
+            
+            <div id="slider-container" class="relative w-full h-full"></div>
+
+            <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 z-40 bg-black/40 hover:bg-teal-500 hover:scale-110 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400" aria-label="Previous Slide">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 z-40 bg-black/40 hover:bg-teal-500 hover:scale-110 text-white p-3 rounded-full backdrop-blur-sm transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400" aria-label="Next Slide">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+
+            <div id="indicators-container" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-40 flex space-x-3" role="tablist" aria-label="Slides"></div>
+            
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
